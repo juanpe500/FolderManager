@@ -21,3 +21,6 @@ Open any file or folder
 Tog files view to only see folders
 
 Whatever you want to add.
+
+Change Log:
+When opening a folder now ask if you want to open the folder or open the terminal in the folder direction

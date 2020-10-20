@@ -49,12 +49,18 @@ def end():
     print("File Viewer closed\nThanks for using me. \n"+JP)
     exit()
 #Logic
+def openFolder(path):
+    a=input("Open in explorer or cmd (e/c)...\n")
+    if a=="e":
+        os.startfile(path)
+    elif a=="c":
+        os.system("start cmd /K cd "+path )
 def logic(ET,data,paths,opciones,ShowFiles):
     a=input("Select the number to open and press Enter...\n")
     if a.isnumeric():  
         if round(float(a)-1)<=len(opciones):
             print(str(opciones[round(float(a)-1)]))
-            os.startfile(str(opciones[round(float(a)-1)]))
+            openFolder(str(opciones[round(float(a)-1)]))
             logic(ET,data,paths,opciones,ShowFiles)
         else:
             print(a+" no es una opcion valida")
@@ -80,7 +86,6 @@ def selection(ET,data,paths,opciones,ShowFiles):
     if a.isnumeric():  
         if int(a):
             if (int(a)-1)<=len(paths) and round(float(a))!=0:
-                
                 path = paths[int(a)-1].firstChild.data
                 opciones = {}
                 opciones[0] = path
@@ -123,10 +128,3 @@ def read(ET,data,opciones,ShowFiles):
     paths = PathsFile.getElementsByTagName('item')
     printPaths(paths,ET,data,opciones,ShowFiles)
 read(ET,data,opciones,ShowFiles)
-
-
-
-
-
-
-

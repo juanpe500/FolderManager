@@ -2,9 +2,9 @@
 Fast folder and file's indexer
 
 Install:
-1.- cd to location
-2.- py files.py
-3.- enjoy
+1.- cd to location\n
+2.- py files.py\n
+3.- enjoy\n
 
 I made this cause I store big amount of files, in this way I can move between folders and files faster, without loading all the UI that I dont need.
 
